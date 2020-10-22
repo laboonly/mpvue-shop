@@ -138,8 +138,8 @@ export default {
   },
   data() {
     return {
-      banner: [],
-      channel: [],
+      banner: [], // 首页轮播图数据
+      channel: [], // 首页分页列表
       brandList: [],
       newGoods: [],
       hotGoods: [],
@@ -214,6 +214,7 @@ export default {
       });
     },
     categoryList(id) {
+      // 路由跳转函数,跳到分类所在页面根据id匹配不同的数据
       wx.navigateTo({
         url: "/pages/categorylist/main?id=" + id
       });
