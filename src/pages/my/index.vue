@@ -4,8 +4,8 @@
       <img @click="toLogin" :src="avator" alt="">
       <div @click="toLogin">
         <p>{{userInfo.nickName}}</p>
-        <p v-if="userInfo.nickname">点击登录</p>
-        <p v-else>微信用户</p>
+        <p v-if="userInfo.nickname">微信用户</p>
+        <p v-else>点击登录</p>
       </div>
     </div>
     <div class="iconlist">
@@ -28,9 +28,8 @@
       // 可以通过 wx.getSetting 先查询一下用户是否授权了 "scope.record" 这个 scope
       if (login()) {
         this.userInfo = login();
-        console.log(this.userInfo);
         this.avator = this.userInfo.avatarUrl;
-      }
+      }      
     },
     created() {},
     mounted() {},

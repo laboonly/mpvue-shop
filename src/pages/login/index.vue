@@ -31,6 +31,9 @@
           success: res => {}
         });
         const session = qcloud.Session.get();
+        console.log("session-------")
+        console.log(session)
+                console.log("session-------")
         if (session) {
           // 第二次登录
           // 或者本地已经有登录态
@@ -57,6 +60,7 @@
               wx.navigateBack({});
             },
             fail: err => {
+              console.log("fail ------------- fail")
               console.log(err);
               wx.hideLoading();
               wx.navigateBack({});
